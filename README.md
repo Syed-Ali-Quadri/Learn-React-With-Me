@@ -1,21 +1,16 @@
-# React Day 01 - Learning the Basics
+# React Day 02 - Building Components and State Management
 
-**Day's Focus:** Understanding React fundamentals
+**Day's Focus:** Deeper dive into React components and state management
 
 **Key Learnings:**
-* React is a JavaScript library for building user interfaces.
-* JSX is a syntax extension for JavaScript that resembles HTML, used to describe UI components.
-* Import and export statements are used to share code between files.
+* Created reusable components using functional and class components.
+* Implemented state management to handle component data changes.
+* Built card components for displaying structured data.
+* Integrated Tailwind CSS for styling the application.
 
-**Challenges:**
-* Grasping the concept of components and how they interact.
-
-**Next Steps:**
-* Practice creating basic React components.
-* Learn about props and state management.
 
 **Resources:**
 * React official documentation
-* Online tutorials and courses
+* Tailwind CSS documentation
 
-**This README file documents my learning progress on Day 01 of my React journey.**
+**This README file documents my learning progress on Day 02 of my React journey.**
