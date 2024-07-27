@@ -17,3 +17,5 @@
 **Resources:**
 * React official documentation
 * Online tutorials and courses
+
+**This README file documents my learning progress on Day 01 of my React journey.**
