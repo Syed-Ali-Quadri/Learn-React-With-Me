@@ -1,4 +1,4 @@
-# React Day 03 - Building Reusable Components and Handling Data
+# React Day 04 - Building Reusable Components and Handling Data
 
 **Day's Focus:** Mastering component reusability and data display
 
