@@ -1,15 +1,13 @@
-# React Day 04 - Building Reusable Components and Handling Data
+# React Day 05 - Mastering State Management with useState
 
-**Day's Focus:** Mastering component reusability and data display
+**Day's Focus:** Deep dive into state management using the useState hook
 
 **Key Learnings:**
-* Created reusable components for efficient code structure.
-* Addressed the key prop warning for improved component identification.
-* Dynamically rendered card components using data from props.
-* Utilized React Fragments to render multiple elements without a parent wrapper.
+* Grasped the concept of state and its role in React components.
+* Effectively used the useState hook to manage component state.
+* Explored basic, intermediate, and advanced use cases of useState.
 
 **Resources:**
 * React official documentation
-* Tailwind CSS documentation
 
-**This README file documents my learning progress on Day 03 of my React journey.**
+**This README file documents my learning progress on Day 05 of my React journey.**
