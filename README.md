@@ -1,13 +1,13 @@
-# React Day 05 - Mastering State Management with useState
+# React Day 06 - Deep Dive into useState
 
-**Day's Focus:** Deep dive into state management using the useState hook
+**Day's Focus:** Mastering state management with useState
 
 **Key Learnings:**
-* Grasped the concept of state and its role in React components.
-* Effectively used the useState hook to manage component state.
-* Explored basic, intermediate, and advanced use cases of useState.
+* Solidified understanding of useState for managing component state.
+* Explored advanced useState techniques for handling arrays.
+* Performed array manipulations (addition, subtraction, division) within state updates.
 
 **Resources:**
 * React official documentation
 
-**This README file documents my learning progress on Day 05 of my React journey.**
+**This README file documents my learning progress on Day 06 of my React journey.**
