@@ -1,9 +1,4 @@
-# React Day 06 - Deep Dive into useState
-
-**Day's Focus:** Mastering state management with useState
-
-**Key Learnings:**
-* Solidified understanding of useState for managing component state.
+# React Day 07 - useState Practice and Tailwind CSS Integration
 
 **Day's Focus:** Consolidating useState knowledge and building a small project
 
@@ -16,9 +11,3 @@
 * Tailwind CSS documentation
 
 **This README file documents my learning progress on Day 07 of my React journey.**
-
-
-**Resources:**
-* React official documentation
-
-**This README file documents my learning progress on Day 06 of my React journey.**
