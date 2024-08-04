@@ -1,13 +1,15 @@
-# React Day 07 - useState Practice and Tailwind CSS Integration
+# React Day 08 - Props, Prop Drilling, and Event Handling
 
-**Day's Focus:** Consolidating useState knowledge and building a small project
+**Day's Focus:** Understanding props, prop drilling, and event handling
 
 **Key Learnings:**
-* Further practiced using useState for managing component state.
-* Successfully built a small project utilizing useState and Tailwind CSS for styling.
+* Grasped the concept of props for passing data between components.
+* Learned about prop drilling and its potential challenges.
+* Implemented prop drilling with event handling for interactive components.
+* Built a mini add friend project to apply learned concepts.
+* Practiced prop drilling through exercises.
 
 **Resources:**
 * React official documentation
-* Tailwind CSS documentation
 
-**This README file documents my learning progress on Day 07 of my React journey.**
+**This README file documents my learning progress on Day 08 of my React journey.**
