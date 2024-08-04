@@ -18,7 +18,7 @@ function Card() {
           alt=""
         />
 
-        <span onClick={()=>setVal(!val)} className="absolute w-10 h-10 cursor-pointer left-1/2 bottom-[15%] bg-[#dadada8a] -transform-x-[50%] -transform-y-[50%] flex justify-center items-center rounded-full">
+        <span onClick={()=>setVal(!val)} className={`absolute transition-transform ease-in duration-300 w-10 h-10 cursor-pointer left-1/2 bottom-[15%] bg-[#dadada8a] -transform-x-[50%] -transform-y-[50%] flex justify-center items-center rounded-full ${val === false ? "rotate-0" : "rotate-180"}`}>
           <FaArrowRightLong size={"1em"} />
         </span>
       </div>
