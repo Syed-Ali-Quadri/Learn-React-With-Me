@@ -1,15 +1,14 @@
-# React Day 08 - Props, Prop Drilling, and Event Handling
+# React Day 09 - Props, State, and Event Handling Exercise
 
-**Day's Focus:** Understanding props, prop drilling, and event handling
+**Day's Focus:** Consolidating props, state, and event handling through a music card project
 
 **Key Learnings:**
-* Grasped the concept of props for passing data between components.
-* Learned about prop drilling and its potential challenges.
-* Implemented prop drilling with event handling for interactive components.
-* Built a mini add friend project to apply learned concepts.
-* Practiced prop drilling through exercises.
+* Effectively used props to pass song and singer information to the music card component.
+* Managed state for tracking favorite songs and updating the favorite count.
+* Implemented event handling to trigger favorite song addition.
+* Created a visual representation of favorite songs using a top-level favorite tab.
 
 **Resources:**
 * React official documentation
 
-**This README file documents my learning progress on Day 08 of my React journey.**
+**This README file documents my learning progress on Day 09 of my React journey.**

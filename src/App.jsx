@@ -2,56 +2,66 @@ import React, { useState } from "react";
 import Card from "./Components/Card";
 import Buttons from "./Components/Buttons";
 import AddCard from "./Components/AddCard";
+import MusicCard from "./Components/MusicCard";
+import Navbar from "./Components/NavBar";
 
 function App() {
-  const userData = [
+  const rawSongData = [
     {
-      name: "John",
-      profession: "Software Engineer",
-      pfp: "https://plus.unsplash.com/premium_photo-1682144187125-b55e638cf286?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      friend: false
+      songName: "Uska hi bana",
+      artistName: "Arijit Singh",
+      addedData: false
     },
     {
-      name: "Emy Smith",
-      profession: "AI Engineer",
-      pfp: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      friend: false
+      songName: "Thoda Thoda Pyaar",
+      artistName: "Stebin Ben",
+      addedData: false
     },
     {
-      name: "Trever De",
-      profession: "Mechanical Engineer",
-      pfp: "https://plus.unsplash.com/premium_photo-1682096252599-e8536cd97d2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      friend: false
+      songName: "Humnava Mere",
+      artistName: "Jubin Natiyal",
+      addedData: false
     },
     {
-      name: "Aditya Roy",
-      profession: "Computer Science Engineer",
-      pfp: "https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      friend: false
+      songName: "Shayad",
+      artistName: "Arijit Singh",
+      addedData: false
+    },
+    {
+      songName: "Likhe Jo Kat Mujhe",
+      artistName: "Mohammed Rafi",
+      addedData: false
+    },
+    {
+      songName: "Musafir",
+      artistName: "Atif Aslam",
+      addedData: false
     }
   ];
 
-  const [data, setData] = useState(userData);
+  const [songData, setSongData] = useState(rawSongData);
 
-  function handleClick(dets) {
-    setData((prev)=>{
-      return prev.map((item, index) =>{
-        if(index === dets){
-          return {...item, friend: !item.friend}
+  const onClickFunction = (index) =>{
+    setSongData((prev) =>{
+      return prev.map((items, stateIndex) =>{
+        if(index === stateIndex){
+          return {...items, addedData: !items.addedData}
         }
-        return item;
+        return items;
       })
     })
   };
 
   return (
     <>
-      <div className="w-full h-screen bg-zinc-300 flex items-center justify-center gap-3 flex-wrap">
-        {data.map((elem, index) => (
-          <AddCard key={index} index={index} value={elem} friends={elem.friend} handleAddFriend={handleClick} />
-        ))}
+      <div className="w-full h-screen">
+        <Navbar data={songData} />
+        <div className="flex mt-10 px-20 gap-10 flex-wrap justify-center">
+          {songData.map((item, index) => {
+            return <MusicCard key={index} clickIndex={index} values={item} handleClick={onClickFunction} />; // add key prop here for unique identification in react array list
+          })}
+        </div>
       </div>
-      {/* <Card />   */}
     </>
   );
 }
