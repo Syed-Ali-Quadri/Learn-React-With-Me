@@ -1,14 +1,13 @@
-# React Day 09 - Props, State, and Event Handling Exercise
+# React Day 10 - Form Handling
 
-**Day's Focus:** Consolidating props, state, and event handling through a music card project
+**Day's Focus:** Understanding and implementing different form handling techniques
 
 **Key Learnings:**
-* Effectively used props to pass song and singer information to the music card component.
-* Managed state for tracking favorite songs and updating the favorite count.
-* Implemented event handling to trigger favorite song addition.
-* Created a visual representation of favorite songs using a top-level favorite tab.
+* Explored three primary methods for preventing form submission reloads: useRef, controlled components with useState, and React Hook Form.
+* Implemented each method to create forms with controlled input values and form submission handling.
 
 **Resources:**
 * React official documentation
+* React Hook Form documentation
 
-**This README file documents my learning progress on Day 09 of my React journey.**
+**This README file documents my learning progress on Day 10 of my React journey.**
