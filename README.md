@@ -1,13 +1,14 @@
-# React Day 10 - Form Handling
+# React Day 11 - User Data Management
 
-**Day's Focus:** Understanding and implementing different form handling techniques
+**Day's Focus:** Creating a user data form and displaying data in a card
 
 **Key Learnings:**
-* Explored three primary methods for preventing form submission reloads: useRef, controlled components with useState, and React Hook Form.
-* Implemented each method to create forms with controlled input values and form submission handling.
+* Built a form to capture user name, image, and email data.
+* Utilized useState and useForm hooks for efficient form management.
+* Displayed collected user data in a card component.
 
 **Resources:**
 * React official documentation
 * React Hook Form documentation
 
-**This README file documents my learning progress on Day 10 of my React journey.**
+**This README file documents my learning progress on Day 11 of my React journey.**

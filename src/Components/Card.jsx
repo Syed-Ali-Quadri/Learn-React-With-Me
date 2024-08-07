@@ -1,28 +1,26 @@
-import React, { useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import React from "react";
 
-function Card() {
-
-  const [val, setVal] = useState(false);
+function Card({ data, handleRemove, id }) {
   return (
-    <div className="w-full h-screen bg-zinc-300 flex justify-center items-center">
-      <div className="relative w-96 h-52 rounded-lg overflow-hidden flex">
-        <img
-          className={`shrink-0 absolute transition-transform ease-in-out duration-700 w-full h-full ${val === false ? "-translate-x-[0%]" : "-translate-x-[100%]"} object-cover`}
-          src="https://images.unsplash.com/photo-1722458660440-4f42938da2e7?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          className={`shrink-0 absolute transition-transform ease-in-out duration-700 w-full h-full ${val === false ? "translate-x-[100%]" : "-translate-x-[0%]"} object-cover`}
-          src="https://images.unsplash.com/photo-1722433258015-0fa276cb3022?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-
-        <span onClick={()=>setVal(!val)} className={`absolute transition-transform ease-in duration-300 w-10 h-10 cursor-pointer left-1/2 bottom-[15%] bg-[#dadada8a] -transform-x-[50%] -transform-y-[50%] flex justify-center items-center rounded-full ${val === false ? "rotate-0" : "rotate-180"}`}>
-          <FaArrowRightLong size={"1em"} />
-        </span>
+    <>
+      <div className="w-52 h-fit bg-white rounded-lg flex flex-col items-center">
+        <div className="image w-16 h-16 bg-zinc-100 rounded-full mt-2 overflow-hidden">
+          <img className="w-full h-full object-cover" src={data.imageURL} />
+        </div>
+        <h1 className="text-xl text-center leading-none font-semibold mt-1">{data.name}</h1>
+        <h4 className="opacity-70 text-xs mt-1">{data.email}</h4>
+        <p className=" p-1 text-xs font-medium mt-1 text-center leading-3">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut labore
+          laborum quisquam.
+        </p>
+        <button
+          onClick={() => handleRemove(id)}
+          className="mt-4 mb-3 px-3 py-1 bg-red-600 text-xs text-bold text-white rounded-md"
+        >
+          Remove It
+        </button>
       </div>
-    </div>
+    </>
   );
 }
 

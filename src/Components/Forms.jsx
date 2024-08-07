@@ -1,56 +1,37 @@
-import React, { useRef, useState } from "react";
-import { useForm } from "react-hook-form"
+import React from "react";
+import { useForm } from "react-hook-form";
 
-function Forms() {
-
-  // 3. React Hook form
-  const { register, handleSubmit } = useForm()
+function Forms({ submitData }) {
+  const { register, handleSubmit, reset } = useForm();
+  const handleFormSubmit = (data) => {
+    submitData(data);
+    reset();
+  };
 
   return (
-    <div className="w-full h-screen p-4 bg-zinc-200 flex items-center justify-center flex-col">
-      <h1 className="mb-8 text-4xl">Form Handling</h1>
-      <form action="/" 
-      onClick={handleSubmit(data => console.log(data))}
-      >
+    <div className="w-full flex items-center justify-center mt-10">
+      <form className="flex gap-8" onSubmit={handleSubmit(handleFormSubmit)}>
         <input
-          className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-          type="text"
-          name="name"
-          placeholder="Name"
           {...register("name")}
-        />
-        <input
-          className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
+          className="px-2 py-1 font-semibold text-base outline-none rounded-md"
           type="text"
-          name="username"
-          placeholder="Username"
-          {...register("username")}
+          placeholder="Name"
         />
         <input
-          className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-          type="email"
-          name="email"
-          placeholder="Email"
           {...register("email")}
+          className="px-2 py-1 font-semibold text-base outline-none rounded-md"
+          type="email"
+          placeholder="Email"
         />
         <input
-          className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-          type="password"
-          name="password"
-          placeholder="Password"
-          {...register("password")}
+          {...register("imageURL")}
+          className="px-2 py-1 font-semibold text-base outline-none rounded-md"
+          type="text"
+          placeholder="Image URL"
         />
         <input
-          className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-          type="number"
-          name="phonenumber"
-          placeholder="Phone Number"
-          {...register("phonenumber")}
-        />
-        <input
-          className="bg-zinc-100 px-3 py-1 border-2 border-zinc-400 rounded-md"
+          className="px-5 py-1 bg-blue-500 font-semibold text-white text-sm rounded-md"
           type="submit"
-          value="sumbit"
         />
       </form>
     </div>
@@ -58,135 +39,3 @@ function Forms() {
 }
 
 export default Forms;
-
-
-// 1.useRef:
-
-// const name = useRef(null);
-// const username = useRef(null);
-// const email = useRef(null);
-// const password = useRef(null);
-// const phoneNumber = useRef(null);
-
-// const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log("Name " + name.current.value);
-//     console.log("Username " + username.current.value);
-//     console.log("Email " + email.current.value);
-//     console.log("Password " + password.current.value);
-//     console.log("Phone Number " + phoneNumber.current.value);
-// };
-
-// return (
-// <div className="w-full h-screen p-4 bg-zinc-200 flex items-center justify-center flex-col">
-//   <h1 className="mb-8 text-4xl">Form Handling</h1>
-//   <form action="/" onSubmit={handleSubmit}>
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="text"
-//       name="name"
-//       placeholder="Name"
-//       ref={name}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="text"
-//       name="username"
-//       placeholder="Username"
-//       ref={username}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="email"
-//       name="email"
-//       placeholder="Email"
-//       ref={email}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="password"
-//       name="password"
-//       placeholder="Password"
-//       ref={password}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="number"
-//       name="phonenumber"
-//       placeholder="Phone Number"
-//       ref={phoneNumber}
-//     />
-//     <input
-//       className="bg-zinc-100 px-3 py-1 border-2 border-zinc-400 rounded-md"
-//       type="submit"
-//       value="sumbit"
-//     />
-//   </form>
-// </div>
-// );
-
-
-// 2. useState (controlled components):
-
-// const [val, setVal] = useState(
-//     {
-//         name: '',
-//         username: '',
-//         email: '',
-//         password: '',
-//         phonenumber: ''
-//     }
-// );
-
-// const handleSubmit = (e) =>{
-//     e.preventDefault();
-//     console.log(val);
-// }
-
-// return (
-// <div className="w-full h-screen p-4 bg-zinc-200 flex items-center justify-center flex-col">
-//   <h1 className="mb-8 text-4xl">Form Handling</h1>
-//   <form action="/" onSubmit={handleSubmit}>
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="text"
-//       name="name"
-//       placeholder="Name"
-//       onChange={(event) => setVal({...val, name: event.target.value})}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="text"
-//       name="username"
-//       placeholder="Username"
-//       onChange={(event) => setVal({...val, username: event.target.value})}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="email"
-//       name="email"
-//       placeholder="Email"
-//       onChange={(event) => setVal({...val, email: event.target.value})}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="password"
-//       name="password"
-//       placeholder="Password"
-//       onChange={(event) => setVal({...val, password: event.target.value})}
-//     />
-//     <input
-//       className="border-2 block mb-3 w-72 border-zinc-400 rounded-md bg-zinc-100 px-2 py-1 text-sm"
-//       type="number"
-//       name="phonenumber"
-//       placeholder="Phone Number"
-//       onChange={(event) => setVal({...val, phonenumber: event.target.value})}
-//     />
-//     <input
-//       className="bg-zinc-100 px-3 py-1 border-2 border-zinc-400 rounded-md"
-//       type="submit"
-//       value="sumbit"
-//     />
-//   </form>
-// </div>
-// );
