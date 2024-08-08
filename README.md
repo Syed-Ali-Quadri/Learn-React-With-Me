@@ -1,14 +1,13 @@
-# React Day 11 - User Data Management
+# React Day 12 - Routing
 
-**Day's Focus:** Creating a user data form and displaying data in a card
+**Day's Focus:** Implementing routing for multi-page application structure
 
 **Key Learnings:**
-* Built a form to capture user name, image, and email data.
-* Utilized useState and useForm hooks for efficient form management.
-* Displayed collected user data in a card component.
+* Introduced React Router for managing navigation between different pages.
+* Created routes for different components or views within the application.
 
 **Resources:**
+* React Router documentation
 * React official documentation
-* React Hook Form documentation
 
-**This README file documents my learning progress on Day 11 of my React journey.**
+**This README file documents my learning progress on Day 12 of my React journey.**
