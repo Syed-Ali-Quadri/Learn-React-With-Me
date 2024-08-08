@@ -1,10 +1,10 @@
-# React Day 12 - Routing
+# React Day 12 - Dynamic Routing
 
-**Day's Focus:** Implementing routing for multi-page application structure
+**Day's Focus:** Implementing dynamic routing for flexible navigation
 
 **Key Learnings:**
-* Introduced React Router for managing navigation between different pages.
-* Created routes for different components or views within the application.
+* Explored dynamic routing capabilities using React Router.
+* Built components that can render different content based on the dynamic route.
 
 **Resources:**
 * React Router documentation
