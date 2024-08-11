@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Home() {
+const Home = () => {
   return (
-    <div>
-      Home
+    <div className='p-5'>
+      <h1>Home</h1>
     </div>
   )
 }
