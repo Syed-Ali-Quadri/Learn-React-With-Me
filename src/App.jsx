@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import NavBar from "./Components/NavBar";
-import Routess from "./Components/Routess";
+import Route from "./Utilities/Routes";
 
 function App() {
   return (
-    <div className="">
+    <>
       <NavBar />
-
-      <Routess />
-    </div>
+      <Route />
+    </>
   );
 }
 

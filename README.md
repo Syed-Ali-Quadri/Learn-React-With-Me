@@ -1,14 +1,14 @@
-# React Day 15 - useEffect with State Changes
+# React Day 16 - React Context API
 
-**Day's Focus:** Understanding and using useEffect with state changes
+**Day's Focus:** Understanding and using React Context API for global state management
 
 **Key Learnings:**
-* Explored the useEffect hook for performing side effects.
-* Learned how to use useEffect to react to state changes.
-* Implemented cleanup functions within useEffect to prevent memory leaks.
-* Optimized useEffect usage for performance.
+* Created a context to share data across components.
+* Used the useContext hook to access context values.
+* Implemented context providers and consumers.
+* Managed global state efficiently using context.
 
 **Resources:**
 * React official documentation
 
-**This README file documents my learning progress on Day 15 of my React journey.**
+**This README file documents my learning progress on Day 16 of my React journey.**
