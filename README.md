@@ -10,6 +10,9 @@ This README file documents a comprehensive learning journey through the fundamen
 * **Routing:** Implementing navigation and dynamic routing using React Router.
 * **Context API:** Sharing data globally within an application.
 
+**Note:** Detailed code examples and explanations for each day's learning can be found in the individual commit messages throughout the repository.
+
+
 By following this structured learning path, you can build a strong foundation in React development and create dynamic and interactive user interfaces.
 
 **Disclaimer:** This README file was generated using an AI language model and may not cover all aspects of React development. It is intended as a general guide and may require additional learning and practice to become proficient in React.
