@@ -1,14 +1,14 @@
-# React Day 16 - React Context API
+# React Day 17 - Context API Revisited
 
-**Day's Focus:** Understanding and using React Context API for global state management
+**Day's Focus:** Deep diving into React Context API
 
 **Key Learnings:**
-* Created a context to share data across components.
-* Used the useContext hook to access context values.
-* Implemented context providers and consumers.
-* Managed global state efficiently using context.
+* Refactored existing code using context for better state management.
+* Explored advanced context usage patterns.
+* Optimized context performance.
+* Considered alternatives to context for specific use cases.
 
 **Resources:**
 * React official documentation
 
-**This README file documents my learning progress on Day 16 of my React journey.**
+**This README file documents my learning progress on Day 17 of my React journey.**

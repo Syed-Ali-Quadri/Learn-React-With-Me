@@ -1,60 +1,28 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import axios from "axios";
 
-export const UserContext = createContext();
+export const userContext = createContext(null);
 
 const Context = (props) => {
+  const [users, setUsers] = useState(null);
 
-    const [users, setUsers] = useState([
-        {
-            id: 0,
-            name: "John Doe",
-            email: "john@doe",
-            phone: "123-456-1234",
-            address: {
-                street: "123 Main St",
-                city: "New York",
-                zipcode: "10001"
-            }
-        },
-        {
-            id: 1,
-            name: "Jane Doe",
-            email: "jane@doe",
-            phone: "567-890-5678",
-            address: {
-                street: "456 Elm St",
-                city: "Los Angeles",
-                zipcode: "90001"
-            }
-        },
-        {
-            id: 2,
-            name: "Michael Doe",
-            email: "mike@doe",
-            phone: "987-654-3210",
-            address: {
-                street: "789 Oak St",
-                city: "Chicago",
-                zipcode: "60601"
-            }
-        },
-        {
-            id: 3,
-            name: "Sarah Doe",
-            email: "sarah@doe",
-            phone: "456-789-0987",
-            address: {
-                street: "234 Pine St",
-                city: "Houston",
-                zipcode: "77001"
-            }
-        }
-    ]);
+  const getUsers = async () => {
+    try {
+      const fetchData = await axios.get("https://jsonplaceholder.typicode.com/users");
+      setUsers(fetchData.data); // Set the data correctly
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
+
+  useEffect(() => {
+    getUsers(); // Fetch users when the component mounts
+  }, []);
 
   return (
-    <UserContext.Provider value={{ users, setUsers }}>
+    <userContext.Provider value={{ users, getUsers }}>
       {props.children}
-    </UserContext.Provider>
+    </userContext.Provider>
   );
 };
 
